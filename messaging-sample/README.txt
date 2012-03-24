@@ -11,3 +11,5 @@ CREATE TABLE `traderequest` (
   `ticker` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB
+
+Also, download StarUML if you want to look at the model

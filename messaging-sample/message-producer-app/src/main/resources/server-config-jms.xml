@@ -20,8 +20,6 @@
 		<property name="stockServiceGateway" ref="jmsBasedStockServiceGateway"></property>
 	</bean>
 	
-	<mvc:resources location="file:./src/main/resources/static/,classpath:/static/" mapping="static/**" />
-	
 	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
 		<property name="connectionFactory" ref="jmsConnectionFactory" />
 		<property name="receiveTimeout" value="100" />

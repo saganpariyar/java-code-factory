@@ -12,12 +12,12 @@ public class TradeRequestDao {
 			Class.forName("com.mysql.jdbc.Driver");
 			// Setup the connection with the DB
 			Connection connect = DriverManager.getConnection("jdbc:mysql://localhost/new_schema?"
-					+ "user=realsuite&password=realsuite");
+					+ "user=root&password=password");
 
 			// PreparedStatements can use variables and are more efficient
 			PreparedStatement preparedStatement = connect
 					.prepareStatement("insert into  traderequest (ticker,description) values (?,?)");
-			// "myuser, webpage, datum, summery, COMMENTS from FEEDBACK.COMMENTS");
+
 			// Parameters start with 1
 			preparedStatement.setString(1, tradeRequest.getTicker());
 			preparedStatement.setString(2, tradeRequest.getDescription());

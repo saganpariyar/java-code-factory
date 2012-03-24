@@ -20,8 +20,6 @@
 		<property name="stockServiceGateway" ref="amqpBasedStockServiceGateway"></property>
 	</bean>
 	
-	<mvc:resources location="file:./src/main/resources/static/,classpath:/static/" mapping="static/**" />
-	
 	<rabbit:connection-factory id="rabbitConnFactory"
                                username="guest"
                                password="guest"
@@ -30,7 +28,7 @@
                            
     <bean id="amqpTemplate" class="org.springframework.amqp.rabbit.core.RabbitTemplate">
 		<property name="connectionFactory" ref="rabbitConnFactory" />
-		<property name="exchange" value="appdynamics.test.exchange" />
+		<property name="exchange" value="messaging.sample.exchange" />
     	<!-- property name="channelTransacted" value="true" /-->
 	</bean>
 
